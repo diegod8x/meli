@@ -1,5 +1,5 @@
-import { Body, Controller, Get, Param, Post, Query, Req } from '@nestjs/common'
-import { ApiOperation, ApiTags } from '@nestjs/swagger'
+import { Body, Controller, Get, Param, Post, Query, Req, Res } from '@nestjs/common'
+import { ApiExcludeEndpoint, ApiOperation, ApiTags } from '@nestjs/swagger'
 import { AppService } from './app.service'
 import { FixRequest, SecretRequest, SplitRequest } from './requests'
 import { Request } from 'express'
@@ -59,6 +59,12 @@ export class AppController {
     @Param('satellite_name') satellite_name: string, @Body() body: SplitRequest
   ): string {
     return this.appService.satelitePosition(satellite_name, body)
+  }
+
+  @ApiExcludeEndpoint()
+  @Get('')
+  redirect(@Res() res) {
+    return res.redirect('/documentation')
   }
 
 }

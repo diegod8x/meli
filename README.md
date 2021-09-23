@@ -24,9 +24,13 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Prueba MELI desarrollada con [Nest](https://github.com/nestjs/nest) framework TypeScript.
 
-## Installation
+## Prueba MELI
+
+- Author - Diego Díaz
+
+## Instalacion
 
 ```bash
 $ npm install
@@ -44,6 +48,10 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+## Documentación funcional del proyecto
+
+- [Documentacion proyecto](http://localhost/documentation)
 
 ## Test
 
